@@ -1521,6 +1521,10 @@ $.extend(Selectize.prototype, {
 			if ($item.hasClass('active')) {
 				idx = self.$activeItems.indexOf($item[0]);
 				self.$activeItems.splice(idx, 1);
+				// Remove active class to avoid misleading UI where adding an
+				// item which was selected during deletion has `.active` class
+				// but is not found in `self.$activeItems`
+				$item.removeClass('active');
 			}
 
 			self.items.splice(i, 1);
