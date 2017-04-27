@@ -52,6 +52,19 @@
 .selectize-dropdown-header-close:hover {
   color: #000000;
 }
+.selectize-control.plugin-loading_spinner .selectize-input .spinner-container {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  margin-top: -6px;
+}
+.selectize-control.plugin-loading_spinner .selectize-input .spinner-container .sk-fading-circle {
+  width: 12px;
+  height: 12px;
+}
+.selectize-control.plugin-loading_spinner.loading .selectize-input:after {
+  border: none;
+}
 .selectize-dropdown.plugin-optgroup_columns .optgroup {
   border-right: 1px solid #f2f2f2;
   border-top: 0 none;
